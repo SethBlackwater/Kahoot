@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Convert Kahoot sets to XLSX files!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body style='background:grey'>
+        <div class="container">
+            <div class="row">
+                <div class="centered col-lg-8 rounded mt-3 p-3" style='background:lightgrey;'>
+                    <a href='https://github.com/SethBlackwater/convert-kahoot-to-xlsx/'><div class='btn btn-primary'>View on Github</div></a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <style>
+                    .centered{
+                        margin:0 auto;
+                        float:none
+                    }
+                    #c:hover{
+                        cursor:pointer
+                    }
+                    #c{
+                        margin-top:12px;
+                        margin-bottom:12px
+                    }
+                </style>
+                <div class="centered col-lg-8 rounded mt-3 pt-4" style='background:lightgrey;'>
+                    <h3 style='text-align:center' class='pb-2'>Kahoot set to XLSX file!</h3>
+                    <form class='w-100'>
+                        <input class='w-100 p-2 rounded' style='border:0' id='a' name='link' placeholder='Kahoot Link...' type='text'><br>
+                        <div id='c' class='btn btn-primary'>Download!</div>
+                    </form>
+                    <p>
+                        Need to save a Kahoot set as a XLSX file to add to a new Kahoot?  This tool allows you to download any Kahoot set!  Simply paste your Kahoot link and click download!<br>
+                        <br>NOTE: This converter doesn't work for Kahoot sets with images.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <iframe id='b' src='about:blank' style='display:none'></iframe>
+        <script>document.getElementById("c").addEventListener("click",function(){var e=document.getElementById("a").value;document.getElementById("b").src="https://app.jerrycam.net/kahoot-to-xlsx/convert.php?link="+e,document.getElementById("a").value="",document.getElementById("a").focus()}),window.addEventListener("load",function(){document.getElementById("a").focus()});</script>
+    </body>
+</html>
